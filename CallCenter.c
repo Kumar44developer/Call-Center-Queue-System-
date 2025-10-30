@@ -35,7 +35,19 @@ case 4: free(queue);
 return 0;
 }
 }
-
+}
+void enqueue(int *queue, int *rear, int *count,
+int size, int ticket)
+{
+if (*count == size)
+printf("Queue Overflow\n");
+else
+{
+*rear = (*rear + 1) % size;
+queue[*rear] = ticket;
+(*count)++;
+}
+}
 
 
 
