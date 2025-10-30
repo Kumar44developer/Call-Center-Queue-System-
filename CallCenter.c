@@ -58,7 +58,21 @@ printf("Ticket #%d has been deleted.\n", queue[*front]);
 *front = (*front + 1) % size;
 (*count)--;
 }
-
+}
+void display(int *queue, int front, int count, int size)
+{
+if (count == 0)
+printf("Circular queue empty: No Calls\n");
+else
+{
+printf("Waiting Calls in Queue:\n");
+for (int i = 0; i < count; i++)
+{
+printf("Ticket #%d\n", queue[front]);
+front = (front + 1) % size;
+}
+}
+}
 
 
 
