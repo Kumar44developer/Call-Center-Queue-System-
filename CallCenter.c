@@ -48,6 +48,16 @@ queue[*rear] = ticket;
 (*count)++;
 }
 }
+void dequeue(int *queue, int *front, int *rear, int *count, int size)
+{
+if (*count == 0)
+printf("Queue Underflow\n");
+else
+{
+printf("Ticket #%d has been deleted.\n", queue[*front]);
+*front = (*front + 1) % size;
+(*count)--;
+}
 
 
 
