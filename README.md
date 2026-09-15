@@ -36,8 +36,8 @@ In call center management, incoming calls must be answered in the exact order th
 
 ```
 Call-Center-Queue-System-/
-├── CallCenter.c     # Source code (circular queue logic, menu loop, memory management)
-└── README.md        # Project documentation
+├── CallCenter.c     
+└── README.md        
 ```
 
 ---
