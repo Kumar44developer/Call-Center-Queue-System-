@@ -22,19 +22,26 @@ printf("3. Display Waiting Calls\n");
 printf("4. Exit\n");
 printf("Enter your choice: ");
 scanf("%d", &choice);
-switch (choice) {
-case 1: printf("Enter Ticket Number: ");
-scanf("%d", &ticket);
-enqueue(queue, &rear, &count, size, ticket);
-break;
-case 2:
-break;
-case 3: display(queue, front, count, size);
-break;
-case 4: free(queue);
-return 0;
-}
-}
+        switch (choice) {
+            case 1:
+                printf("Enter Ticket Number: ");
+                scanf("%d", &ticket);
+                enqueue(queue, &rear, &count, size, ticket);
+                break;
+            case 2:
+                dequeue(queue, &front, &rear, &count, size);
+                break;
+            case 3:
+                display(queue, front, count, size);
+                break;
+            case 4:
+                free(queue);
+                printf("Exiting program...\n");
+                return 0;
+            default:
+                printf("Invalid choice! Please enter 1-4.\n");
+        }
+    }
 }
 void enqueue(int *queue, int *rear, int *count,
 int size, int ticket)
